@@ -1,0 +1,22 @@
+# Data Types
+
+ARRAY
+BIT
+BOOL
+BYTES
+DATE
+ENUM
+DECIMAL
+FLOAT
+INET
+INTERVAL
+JSONB
+SERIAL
+STRING
+TIME
+TIMETZ
+TIMESTAMP
+TIMESTAMPTZ
+
+Code blocks are used for code that spans
+multiple lines.

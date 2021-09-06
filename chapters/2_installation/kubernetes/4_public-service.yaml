@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: cockroachdb-public
+  labels:
+    app: cockroachdb
+spec:
+  ports:
+  - name: tcp
+    port: 26257
+    targetPort: 26257
+  - name: http
+    port: 8080
+    targetPort: 8080
+  selector:
+    app: cockroachdb
+  type: LoadBalancer
