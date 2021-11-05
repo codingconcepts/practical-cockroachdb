@@ -1,7 +1,6 @@
 # Multi-node cluster
 
-## Node 1
-
+State the first node in the cluster by running the following command:
 ```
 $ cockroach start \
   --insecure \
@@ -11,8 +10,7 @@ $ cockroach start \
   --join=localhost:26257,localhost:26258,localhost:26259
 ```
 
-## Node 2
-
+State the second node in the cluster by running the following command:
 ```
 $ cockroach start \
   --insecure \
@@ -22,8 +20,7 @@ $ cockroach start \
   --join=localhost:26257,localhost:26258,localhost:26259
 ```
 
-## Node 3
-
+State the third node in the cluster by running the following command:
 ```
 $ cockroach start \
   --insecure \
@@ -33,26 +30,12 @@ $ cockroach start \
   --join=localhost:26257,localhost:26258,localhost:26259
 ```
 
-## Init
-
+Initialise the cluster by running the following command:
 ```
 $ cockroach init --insecure --host=localhost:26257
-Cluster successfully initialized
 ```
 
-## Connect
-
+Connect to the cluster on the command line by running the following command:
 ```
 $ cockroach sql --insecure --host=localhost:26257
-```
-
-
-```
-cockroach start \
-  --insecure \
-  --store=node1 \
-  --listen-addr=localhost:26257 \
-  --http-addr=localhost:8080 \
-  --locality=region=us-east-1,zone=us-east-1a \
-  --join 'localhost:26257, localhost:26258, localhost:26259, localhost:26260, localhost:26261, localhost:26262, localhost:26263, localhost:26264, localhost:26265'
 ```
